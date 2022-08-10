@@ -12,6 +12,7 @@
         <module>HackerRankExercises</module>
         <module>OnlineMediaStore</module>
         <module>VendingMachine</module>
+        <module>DE_Homework</module>
     </modules>
 
     <properties>
