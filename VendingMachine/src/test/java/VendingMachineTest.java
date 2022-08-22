@@ -4,14 +4,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class VendingMachineTest {
     @Test
-    public void change(){
+    public void ChangeAfterInput(){
         var v=new VendingMachine();
 
         assertEquals(4.3,v.change(5,0.7));
     }
 
     @Test
-    public void getFirstPartChangeAndSecondChange(){
+    public void returnChangeAtVendingMachineInCoins(){
 
         int []vector=new int[]{0,1,0,1,0,4};
         assertArrayEquals(vector, VendingMachine.getFirstPartChangeAndSecondChange(400,30));
