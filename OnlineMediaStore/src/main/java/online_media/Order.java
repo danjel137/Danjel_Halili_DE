@@ -16,14 +16,17 @@ public class Order {
     public static List<DigitalVideoDisc> listWithDigitalVideoDisc = new ArrayList<>();
 
     public   void createFileWithObjectValue() throws IOException {
-        FileWriter allDigitalVideoDisc = new FileWriter("C:\\Users\\HP\\IdeaProjects\\Danjel_Halili_DE\\OnlineMediaStore\\src\\main\\resources\\allDigitalVideoDisc.txt");
+        FileWriter allDigitalVideoDisc = new FileWriter("C:\\Users\\HP\\IdeaProjects\\Danjel_Halili_DE\\OnlineMediaStore\\src\\main\\resources\\properties.txt");
         for (DigitalVideoDisc dg : listWithDigitalVideoDisc) {
             allDigitalVideoDisc.write( dg + "\n");
         }
         allDigitalVideoDisc.close();
     }
+    public void writeListFromFile(){
 
-    public    void createJsonWithObjectValue() {
+    }
+
+    public   void createJsonWithObjectValue() {
 
         ObjectMapper objMap = new ObjectMapper();
         try {

@@ -1,2 +1,0 @@
-aa', category='first', cost=500, director='bb', length=25}
-aa', category='first', cost=500, director='bb', length=25}

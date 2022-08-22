@@ -12,11 +12,13 @@ public class OnlineMedia {
         DigitalVideoDisc firstDigitalVideoDisc = new DigitalVideoDisc("aa", "first", 500, "bb", 25);
         DigitalVideoDisc firstDigitalVideoDisc1 = new DigitalVideoDisc("aa", "first", 500, "bb", 25);
 
-        listWithDigitalVideoDisc.add(firstDigitalVideoDisc);
-        listWithDigitalVideoDisc.add(firstDigitalVideoDisc1);
+//        listWithDigitalVideoDisc.add(firstDigitalVideoDisc);
+//        listWithDigitalVideoDisc.add(firstDigitalVideoDisc1);
         Order order = new Order();
         order.createJsonWithObjectValue();
         order.createFileWithObjectValue();
+        order.fetchJsonWithObjectValue();
+        System.out.println(listWithDigitalVideoDisc);
 
     }
 }
