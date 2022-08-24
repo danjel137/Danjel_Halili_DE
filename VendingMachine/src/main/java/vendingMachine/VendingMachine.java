@@ -28,7 +28,8 @@ public class VendingMachine {
 
 
     public static int[] getFirstPartChangeAndSecondChange(int firstPartChange, int secondPartChange) {
-        if (secondPartChange > 0) {
+       try
+       { if (secondPartChange >= 0) {
             int num1 = 0;
             do {
                 for (int i = 0; i < allChangeInCoins.length; i++) {
@@ -42,7 +43,7 @@ public class VendingMachine {
             }
             while (secondPartChange != 0);
         }
-        if (firstPartChange > 0) {
+        if (firstPartChange >= 0) {
             int num = 0;
             do {
                 for (int i = 0; i < allChangeInCoins.length; i++) {
@@ -56,6 +57,10 @@ public class VendingMachine {
             }
             while (firstPartChange != 0);
         }
+       }
+       catch (Exception e){
+           System.out.println("Please enter only positive number!!!");
+       }
 
         return returnChangeInCoins;
     }
