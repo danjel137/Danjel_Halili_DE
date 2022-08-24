@@ -1,14 +1,9 @@
 import org.junit.jupiter.api.Test;
+import vendingMachine.VendingMachine;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class VendingMachineTest {
-    @Test
-    public void ChangeAfterInput(){
-        var v=new VendingMachine();
-
-        assertEquals(4.3,v.change(5,0.7));
-    }
 
     @Test
     public void returnChangeAtVendingMachineInCoins(){
@@ -17,8 +12,5 @@ class VendingMachineTest {
         assertArrayEquals(vector, VendingMachine.getFirstPartChangeAndSecondChange(400,30));
 
     }
-    @Test
-    public void returnVector(){
-        assertEquals(0,VendingMachine.returnVector());
-    }
+
 }

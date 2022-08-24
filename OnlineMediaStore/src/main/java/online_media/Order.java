@@ -14,6 +14,8 @@ import java.util.List;
 public class Order {
 
     public static List<DigitalVideoDisc> listWithDigitalVideoDisc = new ArrayList<>();
+    public static List<Books> listWithBooks = new ArrayList<>();
+    public static List<Media> listWithMedia = new ArrayList<>();
 
     public   void createFileWithObjectValue() throws IOException {
         FileWriter allDigitalVideoDisc = new FileWriter("C:\\Users\\HP\\IdeaProjects\\Danjel_Halili_DE\\OnlineMediaStore\\src\\main\\resources\\properties.txt");
