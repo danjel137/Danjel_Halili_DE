@@ -6,7 +6,10 @@ public class VendingMachine {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         VendingMachine vendingMachine = new VendingMachine();
-        vendingMachine.change(input.nextDouble(), input.nextDouble());
+        try{vendingMachine.change(input.nextDouble(), input.nextDouble());}
+        catch (Exception e){
+            System.out.println("Please enter only number!");
+        }
         vendingMachine.convert();
         getFirstPartChangeAndSecondChange((int) vendingMachine.firstPartChange, (int) vendingMachine.secondPartChange);
         vendingMachine.returnVector();
@@ -20,6 +23,7 @@ public class VendingMachine {
     double secondPartChange;
 
     private void change(double m, double p) {
+
         if (m > p) {
             theChange = m - p;
         } else theChange = m;
@@ -29,7 +33,7 @@ public class VendingMachine {
 
     public static int[] getFirstPartChangeAndSecondChange(int firstPartChange, int secondPartChange) {
        try
-       { if (secondPartChange >= 0) {
+       { if (secondPartChange > 0 ) {
             int num1 = 0;
             do {
                 for (int i = 0; i < allChangeInCoins.length; i++) {
@@ -43,7 +47,7 @@ public class VendingMachine {
             }
             while (secondPartChange != 0);
         }
-        if (firstPartChange >= 0) {
+        if (firstPartChange > 0) {
             int num = 0;
             do {
                 for (int i = 0; i < allChangeInCoins.length; i++) {
@@ -79,8 +83,8 @@ public class VendingMachine {
         if (theChange > 0.99) {
             firstPartChange = (int) theChange * 100;
             secondPartChange = (int) (((theChange * 10) % 10) * 10);
+
         } else
             firstPartChange = (int) (theChange * 100);
-
     }
 }
