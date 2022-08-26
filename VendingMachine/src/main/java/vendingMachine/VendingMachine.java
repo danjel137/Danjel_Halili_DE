@@ -22,12 +22,12 @@ public class VendingMachine {
     double firstPartChange;
     double secondPartChange;
 
-    private void change(double m, double p) {
+    private double change(double m, double p) {
 
-        if (m > p) {
+        if (m >= p) {
             theChange = m - p;
         } else theChange = m;
-
+        return theChange;
     }
 
 
