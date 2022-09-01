@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class FileWords {
-    List <String>list =new ArrayList<>();
-    List <String>listHelpWorld =new ArrayList<>();
+    static List <String>list =new ArrayList<>();
+    static List <String>listHelpWorld =new ArrayList<>();
     public void readFromFileAndWriteToList() throws FileNotFoundException {
         File file = new File("HackerRankExercises/src/main/resources/Word");
         Scanner scanner = new Scanner(file);
