@@ -25,17 +25,17 @@ public class FileWords {
                 listHelpWorld.add(scanner.nextLine());
             }scanner.close();
     }
-    public void readScoreFromFile() throws FileNotFoundException {
+    public void readScoreFromFile(Hangman hangman) throws FileNotFoundException {
         File file=new File("HackerRankExercises/src/main/resources/Score");
         Scanner scanner=new Scanner(file);
         while (scanner.hasNext()){
-            Hangman.Record = Integer.parseInt(scanner.nextLine());
+            hangman.record = Integer.parseInt(scanner.nextLine());
         }
         scanner.close();
     }
-    public void writeScoreInFile() throws IOException {
+    public void writeScoreInFile(Hangman hangman) throws IOException {
         FileWriter file=new FileWriter("HackerRankExercises/src/main/resources/Score");
-        String st= String.valueOf(Hangman.Record);
+        String st= String.valueOf(hangman.record);
         file.write(st);
         file.close();
     }
