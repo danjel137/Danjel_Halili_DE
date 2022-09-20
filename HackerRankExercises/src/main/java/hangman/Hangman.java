@@ -6,8 +6,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Hangman {
-     int wrongAnswer = 0;
-     int record;
+    int wrongAnswer = 0;
+    int record = 0;
 
 
     public void checkAndSetRecordScore() {
