@@ -13,6 +13,7 @@
         <module>OnlineMediaStore</module>
         <module>VendingMachine</module>
         <module>DE_Homework</module>
+        <module>TestDome</module>
     </modules>
 
     <properties>
