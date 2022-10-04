@@ -28,16 +28,17 @@ public class DecoratorStream extends OutputStream
         result[3] = (byte) (b);
 
         write(result, 0, 4);
+
     }
 
     @Override
     public void write(byte[] b, int off, int len) throws IOException {
 
-        if (prefix != null) {
-            stream.write(prefix.getBytes());
-            prefix = null;
-        }
-        stream.write(b, off, len);
+//        if (prefix != null) {
+//            stream.write(prefix.getBytes());
+//            prefix = null;
+//        }
+//        stream.write(b, off, len);
     }
 
     @Override

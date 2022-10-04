@@ -1,7 +1,9 @@
 package iceCreamMachine;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class IceCreamMachine {
     public String[] ingredients;
@@ -22,11 +24,12 @@ public class IceCreamMachine {
         this.toppings = toppings;
     }
 
+
     public List<IceCream> scoops() {
         List<IceCream> li = new ArrayList<>();
-        for (int i = 0; i < ingredients.length; i++) {
-            for (int j = 0; j < toppings.length; j++) {
-                li.add(new IceCream(ingredients[i], toppings[j]));
+        for (String ing:ingredients) {
+            for (String top:toppings) {
+                li.add(new IceCream(ing, top));
             }
         }
         return li;

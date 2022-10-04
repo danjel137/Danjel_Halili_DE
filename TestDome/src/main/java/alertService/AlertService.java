@@ -34,8 +34,5 @@ class MapAlertDAO implements AlertDAO
     {
         return this.alerts.get(id);
     }
-    public static void main(String args[])
-    {
-        AlertService obj =new AlertService(new MapAlertDAO());
-    }
+
 }
